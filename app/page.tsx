@@ -1,12 +1,22 @@
+'use client'
+
 import AcmeLogo from '@/app/ui/acme-logo';
 import styles from '@/app/ui/home.module.css';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { lusitana } from "@/app/ui/fonts";
 import Image from 'next/image';
+import { useEffect } from 'react';
+import { redirect } from 'next/navigation';
 
 
 export default function Page() {
+
+
+  useEffect(() => {
+    redirect('/dashboard/invoices');
+  })
+
   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
